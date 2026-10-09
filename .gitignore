@@ -1,0 +1,29 @@
+# Claude Code: worktrees and machine-specific config
+.claude/worktrees/
+.claude/launch.json
+.claude/settings.local.json
+
+# Dependencies
+node_modules/
+
+# Build output and deploy tooling
+dist/
+build/
+out/
+.vercel/
+.netlify/
+.cache/
+
+# Environment and secrets
+.env*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

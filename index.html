@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guilherme Freitas Porfirio | Desenvolvedor web</title>
+  <meta name="description" content="Desenvolvo landing pages, sistemas web, painéis administrativos e bots de Discord. Do projeto à publicação, com hospedagem e domínio configurados.">
+  <meta property="og:title" content="Guilherme Freitas Porfirio | Desenvolvedor web">
+  <meta property="og:description" content="Landing pages, sistemas web, painéis e bots de Discord, do projeto à publicação.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/cotani-site.png">
+  <meta name="theme-color" content="#17181a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+    // Aplica o tema salvo antes da primeira pintura (evita piscar claro/escuro).
+    try { var t = localStorage.getItem("tema"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#projetos">Pular para os projetos</a>
+
+  <header class="nav">
+    <div class="nav-pill">
+      <a href="#topo" class="brand" aria-label="Início">
+        <span class="brand-mark">G</span>
+        <span class="brand-name">Guilherme</span>
+      </a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <nav aria-label="Principal">
+        <ul class="nav-links">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#perguntas">Perguntas</a></li>
+        </ul>
+      </nav>
+      <div class="nav-end">
+        <button class="theme-btn" type="button" id="tema" aria-label="Alternar tema claro e escuro">
+          <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
+        </button>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a class="btn btn-sm btn-primary" data-link="whatsapp" href="#contato">Orçamento</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <p class="eyebrow reveal"><span class="live-dot"></span> Aceitando novos projetos</p>
+      <h1 class="reveal">
+        <span>Sites e sistemas web.</span>
+        <span class="tone-accent">Do rascunho ao ar.</span>
+      </h1>
+      <p class="lead reveal">
+        Sou Guilherme Freitas Porfirio. Faço landing pages, lojas virtuais, painéis administrativos e bots
+        de Discord, e entrego com hospedagem e domínio configurados, funcionando no endereço do seu negócio.
+      </p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary btn-lg" data-link="whatsapp" href="#contato">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.25.69-1.44 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.59.84 2.05.91 2.2.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.39 1.47.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.39-.25.67-.15.27.1 1.73.82 2.03.97.3.15.49.22.57.35.07.12.07.71-.18 1.4Z"/></svg>
+          Conversar no WhatsApp
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#projetos">Ver projetos</a>
+      </div>
+      <ul class="checks reveal" aria-label="Como funciona">
+        <li>Proposta por escrito</li>
+        <li>Prévia durante o desenvolvimento</li>
+        <li>Hospedagem e domínio configurados</li>
+      </ul>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section wrap" aria-labelledby="t-projetos">
+      <h2 id="t-projetos" class="display reveal">
+        <span>Trabalhos selecionados.</span>
+        <span class="tone-muted">Alguns já estão no ar.</span>
+      </h2>
+
+      <!-- 01 Cotani -->
+      <article class="row reveal">
+        <a class="window" href="https://www.cotani.com.br" target="_blank" rel="noopener" aria-label="Abrir cotani.com.br">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">cotani.com.br</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
+          <img src="assets/img/cotani-site.png" alt="Página inicial da Cotani com o título “Chega de faltas na agenda e mensagens no WhatsApp às 22h”" loading="lazy" width="1440" height="900">
+        </a>
+        <div class="row-text">
+          <p class="index">01 · SaaS de agendamento</p>
+          <h3>Cotani</h3>
+          <p>
+            Agenda online para clínicas de estética, barbearias e manicures. O cliente marca pelo link e
+            confirma presença no WhatsApp com um toque. Fiz o site de vendas e o painel: agenda, equipe com
+            níveis de acesso, financeiro, relatórios em PDF e assinatura mensal pelo Mercado Pago.
+          </p>
+          <p class="stack-line">Next.js · Astro · Supabase · Mercado Pago</p>
+          <a class="link-arrow" href="https://www.cotani.com.br" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <!-- 02 App do Brás -->
+      <article class="row row-flip reveal">
+        <div class="window window-bras" aria-hidden="true">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">App do Brás · iOS e Android</span><span class="window-live">pré-lançamento</span></div>
+          <div class="bras-art">
+            <img class="bras-logo" src="assets/img/bras-logo.png" alt="" width="280" height="341">
+            <div class="phone">
+              <div class="phone-search">Buscar no Brás <span class="phone-cam">foto</span></div>
+              <div class="phone-store">Loja Bella Moda · Brás</div>
+              <div class="phone-grid">
+                <div class="phone-item"><span class="ph-img ph-a"></span><b>Vestido midi</b><em>R$ 39,90</em></div>
+                <div class="phone-item"><span class="ph-img ph-b"></span><b>Conjunto linho</b><em>R$ 54,90</em></div>
+              </div>
+              <div class="phone-pay">Pix · boleto · excursão</div>
+            </div>
+          </div>
+        </div>
+        <div class="row-text">
+          <p class="index">02 · App iOS e Android + painel web</p>
+          <h3>App do Brás</h3>
+          <p>
+            Marketplace que liga lojistas e fabricantes do Brás, o polo de moda atacadista de São Paulo, a
+            compradores de todo o país. O app tem busca por foto, carrinho separado por loja, pagamento por Pix
+            ou boleto e entrega por frete ou excursão. Lojistas cuidam do catálogo, dos pedidos e dos saques num
+            painel web, e afiliados montam vitrines próprias e ganham comissão sobre as vendas.
+          </p>
+          <p class="stack-line">React Native · React · Supabase · Appmax</p>
+        </div>
+      </article>
+
+      <!-- 03 MotoShop -->
+      <article class="row reveal">
+        <a class="window" href="https://motoshopbrasil.com.br" target="_blank" rel="noopener" aria-label="Abrir motoshopbrasil.com.br">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">motoshopbrasil.com.br</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
+          <img src="assets/img/motoshop-site.png" alt="Página inicial da Moto Shop com o título “A peça certa. A trilha continua.” e busca por fabricante, modelo e ano da moto" loading="lazy" width="1440" height="900">
+        </a>
+        <div class="row-text">
+          <p class="index">03 · Marketplace</p>
+          <h3>Moto Shop Brasil</h3>
+          <p>
+            Marketplace de peças e equipamentos para motos de trilha e motocross, com várias lojas vendendo no
+            mesmo site. O comprador escolhe a moto dele e só vê peças compatíveis, e o carrinho com produtos de
+            lojas diferentes fecha num pagamento só. Cada loja tem a própria central para produtos, estoque,
+            cupons e frete, e a administração aprova vendedores e define comissões.
+          </p>
+          <p class="stack-line">Next.js · Postgres · Mercado Pago · Melhor Envio</p>
+          <a class="link-arrow" href="https://motoshopbrasil.com.br" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <!-- 04 Loja Pronta Prime -->
+      <article class="row row-flip reveal">
+        <a class="window" href="https://lojaprontaprime.com" target="_blank" rel="noopener" aria-label="Abrir lojaprontaprime.com">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">lojaprontaprime.com</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
+          <img src="assets/img/lojapronta-site.png" alt="Tela de entrada da Loja Pronta Prime com a mascote e o título “Sua loja na Shopee começa aqui”" loading="lazy" width="1440" height="900">
+        </a>
+        <div class="row-text">
+          <p class="index">04 · Área de membros</p>
+          <h3>Loja Pronta Prime</h3>
+          <p>
+            Área de alunas de um curso para quem quer vender na Shopee. A conta é criada sozinha quando a compra
+            é aprovada, e no primeiro acesso a aluna define a própria senha. Dentro, encontra módulos, aulas em
+            vídeo e materiais, numa interface pensada primeiro para o celular.
+          </p>
+          <p class="stack-line">Next.js · Postgres · Better Auth · Amazon S3</p>
+          <a class="link-arrow" href="https://lojaprontaprime.com" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <!-- 05 Floruit -->
+      <article class="row reveal">
+        <a class="window" href="https://floruit.com.br" target="_blank" rel="noopener" aria-label="Abrir floruit.com.br">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">floruit.com.br</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
+          <img src="assets/img/floruit-site.png" alt="Página inicial da Floruit com um castelo de Minecraft ao fundo" loading="lazy" width="1440" height="900">
+        </a>
+        <div class="row-text">
+          <p class="index">05 · Site institucional</p>
+          <h3>Floruit Entertainment</h3>
+          <p>
+            Site de um estúdio de jogos de Minecraft de Cuiabá. Cada jogo tem sua página com vídeo e imagens,
+            e a equipe publica no blog por um editor visual, dentro de um painel com login, sem mexer em código.
+          </p>
+          <p class="stack-line">Next.js · Postgres · Editor Tiptap</p>
+          <a class="link-arrow" href="https://floruit.com.br" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <!-- 06 Margot -->
+      <article class="row row-flip reveal">
+        <div class="window">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">Margot · Painel</span></div>
+          <img src="assets/img/margot-painel.png" alt="Painel da Margot mostrando projetos ativos, tarefas abertas e prazos dos próximos 7 dias" loading="lazy" width="1440" height="900">
+        </div>
+        <div class="row-text">
+          <p class="index">06 · Bot de Discord + painel</p>
+          <h3>Margot</h3>
+          <p>
+            Bot que organiza as tarefas de uma equipe dentro do Discord. Alguém digita <code>!task</code> no chat,
+            até pelo celular, e a tarefa aparece num painel com quadro, calendário e prazos. O nome do canal mostra
+            a contagem regressiva do projeto, e o bot manda lembretes e um resumo do dia por mensagem privada.
+          </p>
+          <p class="stack-line">discord.js · TypeScript · Postgres · Docker</p>
+        </div>
+      </article>
+
+      <!-- 07 Kuro -->
+      <article class="row reveal">
+        <div class="window window-mock" aria-hidden="true">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">Kuro · Fila de contato</span><span class="window-live">em desenvolvimento</span></div>
+          <div class="mock">
+            <div class="mock-top">
+              <img class="kuro-logo" src="assets/img/kuro-logo.png" alt="" width="40" height="40">
+              <span class="mock-title">12 contatos para hoje</span>
+              <span class="pill pill-info">automático</span>
+            </div>
+            <ul class="mock-rows">
+              <li><span class="mock-name">Barbearia Centro</span><span class="mock-city">Cuiabá</span><span class="pill pill-warn">Novo</span></li>
+              <li><span class="mock-name">Clínica Bella Pele</span><span class="mock-city">Várzea Grande</span><span class="pill pill-info">Follow-up</span></li>
+              <li><span class="mock-name">Pet Shop Amigo</span><span class="mock-city">Cuiabá</span><span class="pill pill-ok">Aceitou</span></li>
+              <li><span class="mock-name">Auto Peças Silva</span><span class="mock-city">Rondonópolis</span><span class="pill pill-warn">Novo</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row-text">
+          <p class="index">07 · Projeto pessoal · em desenvolvimento</p>
+          <h3>Kuro</h3>
+          <p>
+            Sistema próprio de captação de clientes e automação de processos. Ele organiza a fila de contatos do
+            dia, lembra dos retornos e acompanha cada projeto aceito do briefing até a aprovação da entrega, para
+            que as etapas repetitivas rodem sozinhas.
+          </p>
+          <p class="stack-line">React · Cloudflare Workers · Postgres</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- SERVIÇOS (bento) -->
+    <section id="servicos" class="section wrap" aria-labelledby="t-servicos">
+      <h2 id="t-servicos" class="display reveal">
+        <span>O que eu faço.</span>
+        <span class="tone-muted">E como fica no seu negócio.</span>
+      </h2>
+
+      <div class="bento">
+        <article class="tile tile-wide reveal">
+          <h3>Landing pages e sites. <span class="tone-muted">Página de vendas ou institucional, com o botão do WhatsApp onde o cliente procura.</span></h3>
+          <div class="art art-landing" aria-hidden="true">
+            <div class="mini-page">
+              <span class="bar w70"></span><span class="bar w50"></span>
+              <span class="mini-btn">Agendar agora</span>
+            </div>
+            <div class="bubble">
+              <span class="bubble-name">Cliente · agora</span>
+              Oi! Vi o site e queria um orçamento.
+            </div>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <h3>Sistemas e painéis. <span class="tone-muted">Agenda, clientes, financeiro e relatórios, no jeito que sua empresa já trabalha.</span></h3>
+          <div class="art art-dash" aria-hidden="true">
+            <div class="kpis"><div><b>38</b><span>agendamentos</span></div><div><b>R$ 4,2 mil</b><span>no mês</span></div></div>
+            <div class="bars"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:52%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:95%"></i></div>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <h3>Pagamentos. <span class="tone-muted">Pix e cartão pelo Mercado Pago, avulso ou assinatura, com acesso liberado sozinho.</span></h3>
+          <div class="art art-pay" aria-hidden="true">
+            <div class="pay-row"><span class="pay-icon">✓</span><div><b>Pagamento aprovado</b><span>Plano Profissional · R$ 49,99/mês</span></div></div>
+            <div class="pay-row muted"><span class="pay-icon pay-pix">Pix</span><div><b>Acesso liberado</b><span>e-mail enviado ao cliente</span></div></div>
+          </div>
+        </article>
+
+        <article class="tile tile-wide reveal">
+          <h3>Bots e automações. <span class="tone-muted">Bots de Discord, lembretes e mensagens automáticas no WhatsApp.</span></h3>
+          <div class="art art-bot" aria-hidden="true">
+            <div class="msg"><span class="ava ava-u">R</span><div><b>ryo</b><p><code>!task</code> Ajustar checkout amanhã 15h</p></div></div>
+            <div class="msg"><span class="ava ava-b">M</span><div><b>Margot <em>BOT</em></b><p>Anotado. Prazo: amanhã às 15:00. Te lembro uma hora antes.</p></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section id="processo" class="section wrap" aria-labelledby="t-processo">
+      <h2 id="t-processo" class="display reveal">
+        <span>Do primeiro contato</span>
+        <span class="tone-muted">ao site no ar.</span>
+      </h2>
+      <ol class="steps">
+        <li class="reveal"><kbd>1</kbd><h3>Conversa</h3><p>Você me conta o que precisa pelo WhatsApp ou numa chamada. Pergunto sobre seus clientes e o que precisa estar pronto primeiro.</p></li>
+        <li class="reveal"><kbd>2</kbd><h3>Proposta</h3><p>Escopo, prazo e valor por escrito. Nada começa sem você aprovar.</p></li>
+        <li class="reveal"><kbd>3</kbd><h3>Desenvolvimento</h3><p>Você acompanha por um link de prévia e pede ajustes antes da entrega final.</p></li>
+        <li class="reveal"><kbd>4</kbd><h3>No ar</h3><p>Configuro a hospedagem e o domínio, que ficam no seu nome, publico e explico como usar.</p></li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section id="perguntas" class="section wrap faq-wrap" aria-labelledby="t-faq">
+      <h2 id="t-faq" class="display reveal">
+        <span>Perguntas</span>
+        <span class="tone-muted">frequentes.</span>
+      </h2>
+      <div class="faq reveal">
+        <details>
+          <summary>Quanto custa um site?</summary>
+          <p>Depende do que ele precisa fazer. Uma landing page custa bem menos que um sistema com login e pagamentos. Depois da primeira conversa você recebe um valor fechado, por escrito.</p>
+        </details>
+        <details>
+          <summary>Quanto tempo leva?</summary>
+          <p>O prazo vem na proposta, junto com o valor, e depende do escopo. Durante o desenvolvimento você acompanha tudo por um link de prévia.</p>
+        </details>
+        <details>
+          <summary>Preciso já ter domínio e hospedagem?</summary>
+          <p>Não. Domínio e hospedagem ficam no seu nome e são pagos direto por você, então o site é seu de verdade. Eu indico as opções e configuro tudo. Se você já tiver, uso o que existe.</p>
+        </details>
+        <details>
+          <summary>Consigo mudar o conteúdo sozinho depois?</summary>
+          <p>Quando faz sentido para o projeto, sim. O site da Floruit, por exemplo, tem um painel onde a equipe publica posts sem mexer em código.</p>
+        </details>
+        <details>
+          <summary>E depois que o site estiver no ar?</summary>
+          <p>Você continua falando comigo pelo WhatsApp para correções, ajustes e funções novas.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section wrap contact" aria-labelledby="t-contato">
+      <h2 id="t-contato" class="display center reveal">
+        <span>Tem um projeto?</span>
+        <span class="tone-accent">Vamos conversar.</span>
+      </h2>
+      <p class="lead center reveal">Conte em poucas linhas o que você precisa. Se tiver sites de referência, mande junto: ajuda a acertar o orçamento.</p>
+      <div class="contact-links reveal">
+        <a class="contact-item" data-link="whatsapp" href="#" target="_blank" rel="noopener">
+          <span class="ci-label">WhatsApp</span>
+          <span class="ci-value" data-text="whatsappLabel">(89) 98109-3145</span>
+        </a>
+        <a class="contact-item" data-link="email" href="#">
+          <span class="ci-label">E-mail</span>
+          <span class="ci-value" data-text="email">guifreitas343@gmail.com</span>
+        </a>
+        <a class="contact-item" data-link="instagram" href="#" target="_blank" rel="noopener">
+          <span class="ci-label">Instagram</span>
+          <span class="ci-value" data-text="instagramLabel">@zguifreitas</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="ano">2026</span> Guilherme Freitas Porfirio</span>
+    <a href="#topo">Voltar ao topo ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
