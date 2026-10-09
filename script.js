@@ -13,54 +13,78 @@ const links = {
   instagram: `https://instagram.com/${CONTATO.instagram}`,
 };
 
-document.querySelectorAll("[data-link]").forEach((el) => {
+const textos = { ...CONTATO, instagramLabel: `@${CONTATO.instagram}` };
+
+const root = document.documentElement;
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+function applyContactLink(el) {
   const href = links[el.dataset.link];
   if (!href) return;
   el.href = href;
-  if (el.dataset.link === "whatsapp") {
-    el.target = "_blank";
-    el.rel = "noopener";
-  }
-});
+  if (el.dataset.link !== "whatsapp") return;
+  el.target = "_blank";
+  el.rel = "noopener";
+}
 
-const textos = { ...CONTATO, instagramLabel: `@${CONTATO.instagram}` };
-document.querySelectorAll("[data-text]").forEach((el) => {
+function applyContactText(el) {
   const value = textos[el.dataset.text];
   if (value) el.textContent = value;
-});
+}
 
-const yearElement = document.getElementById("ano");
-if (yearElement) yearElement.textContent = new Date().getFullYear();
+function applyContacts() {
+  document.querySelectorAll("[data-link]").forEach(applyContactLink);
+  document.querySelectorAll("[data-text]").forEach(applyContactText);
+}
+
+function setCurrentYear() {
+  const yearElement = document.getElementById("ano");
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
+}
 
 // Animação de entrada ao rolar
-const reveals = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+function canAnimateReveal() {
+  return "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function revealOnIntersect(entries, io) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("is-in");
+    io.unobserve(entry.target);
+  });
+}
+
+function setupRevealAnimation() {
+  if (!canAnimateReveal()) return;
   document.documentElement.classList.add("js-reveal");
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        }
-      });
-    },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-  );
-  reveals.forEach((el) => io.observe(el));
+  const io = new IntersectionObserver(revealOnIntersect, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 }
 
 // Tema claro/escuro (o <head> já aplicou o salvo antes da pintura)
-const root = document.documentElement;
-const themeMeta = document.querySelector('meta[name="theme-color"]');
 const syncThemeColor = () => themeMeta && (themeMeta.content = root.dataset.theme === "light" ? "#e6e4df" : "#17181a");
-syncThemeColor();
-document.getElementById("tema")?.addEventListener("click", () => {
-  root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
-  syncThemeColor();
+
+function saveTheme(theme) {
   try {
-    localStorage.setItem("tema", root.dataset.theme);
+    localStorage.setItem("tema", theme);
   } catch (error) {
     console.warn("[theme] Could not save theme preference", error);
   }
-});
+}
+
+function toggleTheme() {
+  root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+  syncThemeColor();
+  saveTheme(root.dataset.theme);
+}
+
+function setupThemeToggle() {
+  syncThemeColor();
+  document.getElementById("tema")?.addEventListener("click", toggleTheme);
+}
+
+applyContacts();
+setCurrentYear();
+setupRevealAnimation();
+setupThemeToggle();
