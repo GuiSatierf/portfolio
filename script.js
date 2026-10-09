@@ -29,7 +29,8 @@ document.querySelectorAll("[data-text]").forEach((el) => {
   if (value) el.textContent = value;
 });
 
-document.getElementById("ano").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("ano");
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 // Animação de entrada ao rolar
 const reveals = document.querySelectorAll(".reveal");
@@ -54,7 +55,7 @@ const root = document.documentElement;
 const themeMeta = document.querySelector('meta[name="theme-color"]');
 const syncThemeColor = () => themeMeta && (themeMeta.content = root.dataset.theme === "light" ? "#e6e4df" : "#17181a");
 syncThemeColor();
-document.getElementById("tema").addEventListener("click", () => {
+document.getElementById("tema")?.addEventListener("click", () => {
   root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
   syncThemeColor();
   try {
