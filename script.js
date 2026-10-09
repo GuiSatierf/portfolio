@@ -57,5 +57,9 @@ syncThemeColor();
 document.getElementById("tema").addEventListener("click", () => {
   root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
   syncThemeColor();
-  try { localStorage.setItem("tema", root.dataset.theme); } catch (e) {}
+  try {
+    localStorage.setItem("tema", root.dataset.theme);
+  } catch (error) {
+    console.warn("[theme] Could not save theme preference", error);
+  }
 });
