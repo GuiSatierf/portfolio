@@ -1,35 +1,41 @@
 // Troque aqui seus contatos. Todo o site usa estes valores.
-const CONTATO = {
+const CONTACT = Object.freeze({
   whatsapp: "5589981093145", // DDI + DDD + número, só dígitos
   whatsappLabel: "(89) 98109-3145",
-  whatsappMensagem: "Olá, Guilherme! Vi seu portfólio e quero conversar sobre um projeto.",
+  whatsappMessage: "Olá, Guilherme! Vi seu portfólio e quero conversar sobre um projeto.",
   email: "guifreitas343@gmail.com",
   instagram: "zguifreitas", // sem o @
-};
+});
 
-const links = {
-  whatsapp: `https://wa.me/${CONTATO.whatsapp}?text=${encodeURIComponent(CONTATO.whatsappMensagem)}`,
-  email: `mailto:${CONTATO.email}`,
-  instagram: `https://instagram.com/${CONTATO.instagram}`,
-};
+const CONTACT_LINKS = Object.freeze({
+  whatsapp: `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(CONTACT.whatsappMessage)}`,
+  email: `mailto:${CONTACT.email}`,
+  instagram: `https://instagram.com/${CONTACT.instagram}`,
+});
 
-const textos = { ...CONTATO, instagramLabel: `@${CONTATO.instagram}` };
+const CONTACT_TEXTS = Object.freeze({ ...CONTACT, instagramLabel: `@${CONTACT.instagram}` });
 
-const root = document.documentElement;
-const themeMeta = document.querySelector('meta[name="theme-color"]');
+const THEME_COLORS = Object.freeze({ light: "#e6e4df", dark: "#17181a" });
 
-function applyContactLink(el) {
-  const href = links[el.dataset.link];
+const rootElement = document.documentElement;
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+function applyContactLink(linkElement) {
+  const href = CONTACT_LINKS[linkElement.dataset.link];
   if (!href) return;
-  el.href = href;
-  if (el.dataset.link !== "whatsapp") return;
-  el.target = "_blank";
-  el.rel = "noopener";
+
+  linkElement.href = href;
+  if (linkElement.dataset.link !== "whatsapp") return;
+
+  linkElement.target = "_blank";
+  linkElement.rel = "noopener";
 }
 
-function applyContactText(el) {
-  const value = textos[el.dataset.text];
-  if (value) el.textContent = value;
+function applyContactText(textElement) {
+  const text = CONTACT_TEXTS[textElement.dataset.text];
+  if (!text) return;
+
+  textElement.textContent = text;
 }
 
 function applyContacts() {
@@ -39,31 +45,44 @@ function applyContacts() {
 
 function setCurrentYear() {
   const yearElement = document.getElementById("ano");
-  if (yearElement) yearElement.textContent = new Date().getFullYear();
+  if (!yearElement) return;
+
+  yearElement.textContent = new Date().getFullYear();
 }
 
 // Animação de entrada ao rolar
 function canAnimateReveal() {
-  return "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return "IntersectionObserver" in window && !prefersReducedMotion;
 }
 
-function revealOnIntersect(entries, io) {
+function revealOnIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
+
     entry.target.classList.add("is-in");
-    io.unobserve(entry.target);
+    observer.unobserve(entry.target);
   });
 }
 
 function setupRevealAnimation() {
   if (!canAnimateReveal()) return;
-  document.documentElement.classList.add("js-reveal");
-  const io = new IntersectionObserver(revealOnIntersect, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  rootElement.classList.add("js-reveal");
+  const observer = new IntersectionObserver(revealOnIntersect, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  document.querySelectorAll(".reveal").forEach((revealElement) => observer.observe(revealElement));
 }
 
 // Tema claro/escuro (o <head> já aplicou o salvo antes da pintura)
-const syncThemeColor = () => themeMeta && (themeMeta.content = root.dataset.theme === "light" ? "#e6e4df" : "#17181a");
+function isLightTheme() {
+  return rootElement.dataset.theme === "light";
+}
+
+function syncThemeColor() {
+  if (!themeColorMeta) return;
+
+  themeColorMeta.content = isLightTheme() ? THEME_COLORS.light : THEME_COLORS.dark;
+}
 
 function saveTheme(theme) {
   try {
@@ -74,9 +93,9 @@ function saveTheme(theme) {
 }
 
 function toggleTheme() {
-  root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+  rootElement.dataset.theme = isLightTheme() ? "dark" : "light";
   syncThemeColor();
-  saveTheme(root.dataset.theme);
+  saveTheme(rootElement.dataset.theme);
 }
 
 function setupThemeToggle() {

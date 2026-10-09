@@ -14,8 +14,8 @@
   <script>
     // Aplica o tema salvo antes da primeira pintura (evita piscar claro/escuro).
     try {
-      var t = localStorage.getItem("tema");
-      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      var savedTheme = localStorage.getItem("tema");
+      if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
     } catch (error) {
       console.warn("[theme] Could not read saved theme preference", error);
     }
