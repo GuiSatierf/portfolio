@@ -137,13 +137,6 @@ kbd {
 .hero h1 { display: grid; font-size: clamp(42px, 8.4vw, 100px); font-weight: 700; letter-spacing: -0.055em; line-height: .98; }
 .lead { color: var(--ink-muted); font-size: clamp(16px, 1.7vw, 19px); line-height: 1.6; max-width: 56ch; margin: 28px auto 0; }
 .hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 36px; }
-.checks { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-top: 24px; font-size: 14px; color: var(--ink-muted); }
-.checks li { display: inline-flex; align-items: center; gap: 7px; }
-.checks li::before {
-  content: ""; width: 14px; height: 14px; flex: none; background: var(--ok);
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
-          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
-}
 .scroll-cue { display: grid; place-items: start center; width: 22px; height: 36px; margin: 56px auto 0; padding-top: 6px; border: 2px solid var(--line-strong); border-radius: 999px; }
 .scroll-cue span { width: 4px; height: 8px; border-radius: 999px; background: var(--ink-subtle); animation: scroll-cue 1.8s ease-in-out infinite; }
 @keyframes scroll-cue { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(12px); opacity: 0; } 100% { transform: translateY(0); opacity: 0; } }
@@ -321,14 +314,9 @@ kbd {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); overflow: hidden;
 }
 .tile-wide { grid-column: span 7; }
-.tile-full { grid-column: 1 / -1; }
 .tile h3 { font-size: clamp(20px, 2.1vw, 26px); letter-spacing: -0.03em; line-height: 1.22; font-weight: 700; }
 .art { margin-top: auto; }
-.tile-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; align-items: center; }
-@media (max-width: 860px) {
-  .tile, .tile-wide { grid-column: 1 / -1; }
-  .tile-split { grid-template-columns: 1fr; }
-}
+@media (max-width: 860px) { .tile, .tile-wide { grid-column: 1 / -1; } }
 
 .art-devices { display: flex; align-items: flex-end; gap: 16px; }
 .frame { display: grid; gap: 8px; padding: 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
@@ -365,15 +353,6 @@ kbd {
 .sp-you { justify-self: start; background: var(--surface-2); border-top-left-radius: 3px; }
 .sp-me { justify-self: end; background: #1f6d4f; color: #f2fff8; border-top-right-radius: 3px; }
 
-.art-bot { display: grid; gap: 14px; padding: 18px; border-radius: var(--radius); background: var(--surface-2); border: 1px solid var(--line); }
-.msg { display: flex; gap: 12px; }
-.msg b { font-size: 14px; }
-.msg em { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5px; margin-left: 4px; border-radius: 4px; background: #5865f2; color: #fff; vertical-align: 1px; }
-.msg p { font-size: 14px; color: var(--ink-muted); }
-.ava { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; flex: none; font-size: 13px; font-weight: 700; color: #fff; }
-.ava-u { background: #e0679a; }
-.ava-b { background: #5865f2; }
-
 /* ---------- Processo ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .steps li { display: grid; gap: 10px; align-content: start; padding: 24px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); }
@@ -399,7 +378,8 @@ kbd {
 /* ---------- Contato ---------- */
 .contact { padding-bottom: 48px; text-align: center; }
 .contact .lead { margin-top: -36px; }
-.contact-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 860px; margin: 40px auto 0; }
+.contact .hero-cta { margin-top: 28px; }
+.contact-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 860px; margin: 32px auto 0; }
 .contact-item {
   display: grid; gap: 4px; padding: 20px; text-align: left; border-radius: var(--radius);
   background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-soft);
