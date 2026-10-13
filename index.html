@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Guilherme Freitas Porfirio | Desenvolvedor web</title>
-  <meta name="description" content="Desenvolvo landing pages, sistemas web, painéis administrativos e bots de Discord. Do projeto à publicação, com hospedagem e domínio configurados.">
+  <meta name="description" content="Desenvolvo sites, sistemas web, painéis administrativos e automações no WhatsApp e no Discord. Do rascunho ao ar, com hospedagem e domínio no seu nome.">
   <meta property="og:title" content="Guilherme Freitas Porfirio | Desenvolvedor web">
-  <meta property="og:description" content="Landing pages, sistemas web, painéis e bots de Discord, do projeto à publicação.">
+  <meta property="og:description" content="Sites, sistemas, pagamentos e automações, do rascunho ao ar.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://guisatierf.github.io/portfolio/">
@@ -29,11 +29,12 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#projetos">Pular para os projetos</a>
+  <a class="skip" href="#como-funciona">Pular para a demonstração</a>
+  <div class="progress" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="nav-pill">
@@ -44,8 +45,9 @@
       <span class="nav-sep" aria-hidden="true"></span>
       <nav aria-label="Principal">
         <ul class="nav-links">
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-funciona">Como fica</a></li>
+          <li><a href="#detalhes">Detalhes</a></li>
+          <li><a href="#processo">Processo</a></li>
           <li><a href="#perguntas">Perguntas</a></li>
         </ul>
       </nav>
@@ -61,217 +63,190 @@
   </header>
 
   <main id="topo">
-    <!-- HERO -->
+    <!-- TOPO -->
     <section class="hero wrap">
       <p class="eyebrow reveal"><span class="live-dot"></span> Aceitando novos projetos</p>
-      <h1 class="reveal">
+      <h1 class="reveal" data-delay="60">
         <span>Sites e sistemas web.</span>
         <span class="tone-accent">Do rascunho ao ar.</span>
       </h1>
-      <p class="lead reveal">
-        Sou Guilherme Freitas Porfirio. Faço landing pages, lojas virtuais, painéis administrativos e bots
-        de Discord, e entrego com hospedagem e domínio configurados, funcionando no endereço do seu negócio.
+      <p class="lead reveal" data-delay="140">
+        Sou Guilherme Freitas Porfirio. Faço o site, o painel, a cobrança e os avisos automáticos do seu
+        negócio, e entrego tudo funcionando no seu endereço, com hospedagem e domínio no seu nome.
       </p>
-      <div class="hero-cta reveal">
+      <div class="hero-cta reveal" data-delay="220">
         <a class="btn btn-primary btn-lg" data-link="whatsapp" href="#contato">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.25.69-1.44 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.59.84 2.05.91 2.2.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.39 1.47.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.39-.25.67-.15.27.1 1.73.82 2.03.97.3.15.49.22.57.35.07.12.07.71-.18 1.4Z"/></svg>
           Conversar no WhatsApp
         </a>
-        <a class="btn btn-ghost btn-lg" href="#projetos">Ver projetos</a>
+        <a class="btn btn-ghost btn-lg" href="#como-funciona">Ver como fica</a>
       </div>
-      <ul class="checks reveal" aria-label="Como funciona">
+      <ul class="checks reveal" data-delay="300" aria-label="Como funciona">
         <li>Proposta por escrito</li>
         <li>Prévia durante o desenvolvimento</li>
-        <li>Hospedagem e domínio configurados</li>
+        <li>Domínio e hospedagem no seu nome</li>
       </ul>
+      <a class="scroll-cue" href="#como-funciona" aria-label="Rolar para a demonstração"><span></span></a>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="section wrap" aria-labelledby="t-projetos">
-      <h2 id="t-projetos" class="display reveal">
-        <span>Trabalhos selecionados.</span>
-        <span class="tone-muted">Alguns já estão no ar.</span>
-      </h2>
+    <!-- CENA PRESA NA TELA: um negócio fictício ganhando site, painel, cobrança e aviso -->
+    <section id="como-funciona" class="scene" aria-labelledby="t-scene">
+      <div class="scene-track">
+        <div class="scene-stage">
+          <div class="wrap scene-inner">
+            <p class="kicker">Como fica no seu negócio</p>
+            <h2 id="t-scene" class="scene-titles">
+              <span class="scene-title" data-chapter="0">
+                <span>Um site que vende.</span>
+                <small>Com o botão do WhatsApp onde o cliente procura.</small>
+              </span>
+              <span class="scene-title" data-chapter="1">
+                <span>Um painel para o dia a dia.</span>
+                <small>Agenda, clientes e caixa no mesmo lugar.</small>
+              </span>
+              <span class="scene-title" data-chapter="2">
+                <span>Cobrança que cai sozinha.</span>
+                <small>Pix ou cartão, com o pedido marcado como pago na hora.</small>
+              </span>
+              <span class="scene-title" data-chapter="3">
+                <span>Avisos que chegam no WhatsApp.</span>
+                <small>O cliente confirma com um toque, e o painel já sabe.</small>
+              </span>
+            </h2>
 
-      <!-- 01 Cotani -->
-      <article class="row reveal">
-        <a class="window" href="https://www.cotani.com.br" target="_blank" rel="noopener" aria-label="Abrir cotani.com.br">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">cotani.com.br</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
-          <img src="assets/img/cotani-site.webp" alt="Página inicial da Cotani com o título “Chega de faltas na agenda e mensagens no WhatsApp às 22h”" loading="lazy" width="1440" height="900">
-        </a>
-        <div class="row-text">
-          <p class="index">01 · SaaS de agendamento</p>
-          <h3>Cotani</h3>
-          <p>
-            Agenda online para clínicas de estética, barbearias e manicures. O cliente marca pelo link e
-            confirma presença no WhatsApp com um toque. Fiz o site de vendas e o painel: agenda, equipe com
-            níveis de acesso, financeiro, relatórios em PDF e assinatura mensal pelo Mercado Pago.
-          </p>
-          <p class="stack-line">Next.js · Astro · Supabase · Mercado Pago</p>
-          <a class="link-arrow" href="https://www.cotani.com.br" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+            <div class="device" aria-hidden="true">
+              <div class="browser">
+                <div class="browser-bar">
+                  <span class="dots"><i></i><i></i><i></i></span>
+                  <span class="url"><span class="url-site">alameda.com.br</span><span class="url-panel">painel.alameda.com.br</span></span>
+                  <span class="browser-live" data-at="0.85"><span class="live-dot"></span> no ar</span>
+                </div>
+                <div class="browser-body">
+                  <!-- Capítulo 1: o site se monta -->
+                  <div class="site">
+                    <div class="site-nav" data-at="0.08"><span class="site-logo">Alameda</span><span class="site-links"><i></i><i></i><i></i></span></div>
+                    <div class="site-copy">
+                      <div class="sk" data-at="0.14" data-until="0.34"><span class="sk-bar w80"></span><span class="sk-bar w60"></span><span class="sk-bar w40"></span></div>
+                      <p class="site-h" data-at="0.34">Atendimento com hora marcada, sem fila.</p>
+                      <p class="site-p" data-at="0.46">Escolha o horário pelo site e receba a confirmação no WhatsApp.</p>
+                      <span class="site-btn" data-at="0.58">Agendar pelo WhatsApp</span>
+                    </div>
+                    <div class="site-photo" data-at="0.7"><span></span></div>
+                  </div>
 
-      <!-- 02 App do Brás -->
-      <article class="row row-flip reveal">
-        <div class="window window-bras" aria-hidden="true">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">App do Brás · iOS e Android</span><span class="window-live">pré-lançamento</span></div>
-          <div class="bras-art">
-            <img class="bras-logo" src="assets/img/bras-logo.png" alt="" width="280" height="341">
-            <div class="phone">
-              <div class="phone-search">Buscar no Brás <span class="phone-cam">foto</span></div>
-              <div class="phone-store">Loja Bella Moda · Brás</div>
-              <div class="phone-grid">
-                <div class="phone-item"><span class="ph-img ph-a"></span><b>Vestido midi</b><em>R$ 39,90</em></div>
-                <div class="phone-item"><span class="ph-img ph-b"></span><b>Conjunto linho</b><em>R$ 54,90</em></div>
+                  <!-- Capítulo 2: o painel -->
+                  <div class="panel">
+                    <aside class="p-side" data-at="1.1">
+                      <span class="p-brand">Alameda</span>
+                      <span class="p-item on">Hoje</span><span class="p-item">Clientes</span><span class="p-item">Caixa</span><span class="p-item">Relatórios</span>
+                    </aside>
+                    <div class="p-main">
+                      <div class="p-head" data-at="1.18"><b>Hoje</b><span>3 horários · terça, 14 de out.</span></div>
+                      <ul class="p-rows">
+                        <li class="p-row" data-at="1.3"><span class="p-time">09:00</span><span class="p-name">Pedro Alves</span><span class="p-note">Avaliação</span><span class="p-badge p-done">Concluído</span></li>
+                        <li class="p-row" data-at="1.44"><span class="p-time">11:30</span><span class="p-name">Carla Mendes</span><span class="p-note">Retorno</span><span class="p-badge p-paid" data-at="2.78">Pago</span></li>
+                        <li class="p-row" data-at="1.58"><span class="p-time">15:30</span><span class="p-name">Mariana Lopes</span><span class="p-note">Atendimento</span><span class="p-badge p-ok" data-at="3.86">Confirmado</span></li>
+                      </ul>
+                      <div class="p-kpis" data-at="1.74">
+                        <div><b>R$ 1.240</b><span>no caixa hoje</span></div>
+                        <div class="p-bars"><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:50%"></i><i style="--h:78%"></i><i style="--h:66%"></i><i style="--h:92%"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Capítulo 3: o pagamento -->
+                  <div class="pay" data-at="2.14" data-until="3.08">
+                    <span class="pay-icon">Pix</span>
+                    <div class="pay-text">
+                      <b>R$ 180,00 · Carla Mendes</b>
+                      <span class="pay-state"><span class="pay-wait" data-at="2.14" data-until="2.56"><i class="spin"></i> Aguardando pagamento</span><span class="pay-ok" data-at="2.56">Pagamento aprovado</span></span>
+                    </div>
+                    <span class="pay-check" data-at="2.56">✓</span>
+                  </div>
+                </div>
               </div>
-              <div class="phone-pay">Pix · boleto · excursão</div>
+
+              <!-- Capítulo 4: o WhatsApp -->
+              <div class="wa" data-at="3.08">
+                <div class="wa-head"><span class="wa-ava">A</span><div><b>Alameda</b><span>online</span></div></div>
+                <div class="wa-body">
+                  <p class="wa-in" data-at="3.26">Oi, Mariana! Seu horário é amanhã às <b>15:30</b>. Responda <b>1</b> para confirmar.</p>
+                  <p class="wa-typing" data-at="3.42" data-until="3.56"><i></i><i></i><i></i></p>
+                  <p class="wa-out" data-at="3.56">1</p>
+                  <p class="wa-in" data-at="3.74">Confirmado ✓ Até amanhã!</p>
+                </div>
+              </div>
             </div>
+
+            <ol class="ticks" aria-hidden="true">
+              <li class="tick" data-chapter="0"><i></i></li>
+              <li class="tick" data-chapter="1"><i></i></li>
+              <li class="tick" data-chapter="2"><i></i></li>
+              <li class="tick" data-chapter="3"><i></i></li>
+            </ol>
           </div>
         </div>
-        <div class="row-text">
-          <p class="index">02 · App iOS e Android + painel web</p>
-          <h3>App do Brás</h3>
-          <p>
-            Marketplace que liga lojistas e fabricantes do Brás, o polo de moda atacadista de São Paulo, a
-            compradores de todo o país. O app tem busca por foto, carrinho separado por loja, pagamento por Pix
-            ou boleto e entrega por frete ou excursão. Lojistas cuidam do catálogo, dos pedidos e dos saques num
-            painel web, e afiliados montam vitrines próprias e ganham comissão sobre as vendas.
-          </p>
-          <p class="stack-line">React Native · React · Supabase · Appmax</p>
-        </div>
-      </article>
-
-      <!-- 03 MotoShop -->
-      <article class="row reveal">
-        <a class="window" href="https://motoshopbrasil.com.br" target="_blank" rel="noopener" aria-label="Abrir motoshopbrasil.com.br">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">motoshopbrasil.com.br</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
-          <img src="assets/img/motoshop-site.webp" alt="Página inicial da Moto Shop com o título “A peça certa. A trilha continua.” e busca por fabricante, modelo e ano da moto" loading="lazy" width="1440" height="900">
-        </a>
-        <div class="row-text">
-          <p class="index">03 · Marketplace</p>
-          <h3>Moto Shop Brasil</h3>
-          <p>
-            Marketplace de peças e equipamentos para motos de trilha e motocross, com várias lojas vendendo no
-            mesmo site. O comprador escolhe a moto dele e só vê peças compatíveis, e o carrinho com produtos de
-            lojas diferentes fecha num pagamento só. Cada loja tem a própria central para produtos, estoque,
-            cupons e frete, e a administração aprova vendedores e define comissões.
-          </p>
-          <p class="stack-line">Next.js · Postgres · Mercado Pago · Melhor Envio</p>
-          <a class="link-arrow" href="https://motoshopbrasil.com.br" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-
-      <!-- 04 Floruit -->
-      <article class="row row-flip reveal">
-        <a class="window" href="https://floruit.com.br" target="_blank" rel="noopener" aria-label="Abrir floruit.com.br">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">floruit.com.br</span><span class="window-live"><span class="live-dot"></span> no ar</span></div>
-          <img src="assets/img/floruit-site.webp" alt="Página inicial da Floruit com um castelo de Minecraft ao fundo" loading="lazy" width="1440" height="900">
-        </a>
-        <div class="row-text">
-          <p class="index">04 · Site institucional</p>
-          <h3>Floruit Entertainment</h3>
-          <p>
-            Site de um estúdio de jogos de Minecraft de Cuiabá. Cada jogo tem sua página com vídeo e imagens,
-            e a equipe publica no blog por um editor visual, dentro de um painel com login, sem mexer em código.
-          </p>
-          <p class="stack-line">Next.js · Postgres · Editor Tiptap</p>
-          <a class="link-arrow" href="https://floruit.com.br" target="_blank" rel="noopener">Visitar o site <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-
-      <!-- 05 Margot -->
-      <article class="row reveal">
-        <div class="window">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">Margot · Painel</span></div>
-          <img src="assets/img/margot-painel.webp" alt="Painel da Margot mostrando projetos ativos, tarefas abertas e prazos dos próximos 7 dias" loading="lazy" width="1440" height="900">
-        </div>
-        <div class="row-text">
-          <p class="index">05 · Bot de Discord + painel</p>
-          <h3>Margot</h3>
-          <p>
-            Bot que organiza as tarefas de uma equipe dentro do Discord. Alguém digita <code>!task</code> no chat,
-            até pelo celular, e a tarefa aparece num painel com quadro, calendário e prazos. O nome do canal mostra
-            a contagem regressiva do projeto, e o bot manda lembretes e um resumo do dia por mensagem privada.
-          </p>
-          <p class="stack-line">discord.js · TypeScript · Postgres · Docker</p>
-        </div>
-      </article>
-
-      <!-- 06 Kuro -->
-      <article class="row row-flip reveal">
-        <div class="window window-mock" aria-hidden="true">
-          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">Kuro · Fila de contato</span><span class="window-live">em desenvolvimento</span></div>
-          <div class="mock">
-            <div class="mock-top">
-              <img class="kuro-logo" src="assets/img/kuro-logo.png" alt="" width="40" height="40">
-              <span class="mock-title">12 contatos para hoje</span>
-              <span class="pill pill-info">automático</span>
-            </div>
-            <ul class="mock-rows">
-              <li><span class="mock-name">Barbearia Centro</span><span class="mock-city">Cuiabá</span><span class="pill pill-warn">Novo</span></li>
-              <li><span class="mock-name">Clínica Bella Pele</span><span class="mock-city">Várzea Grande</span><span class="pill pill-info">Follow-up</span></li>
-              <li><span class="mock-name">Pet Shop Amigo</span><span class="mock-city">Cuiabá</span><span class="pill pill-ok">Aceitou</span></li>
-              <li><span class="mock-name">Auto Peças Silva</span><span class="mock-city">Rondonópolis</span><span class="pill pill-warn">Novo</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row-text">
-          <p class="index">06 · Projeto pessoal · em desenvolvimento</p>
-          <h3>Kuro</h3>
-          <p>
-            Sistema próprio de captação de clientes e automação de processos. Ele organiza a fila de contatos do
-            dia, lembra dos retornos e acompanha cada projeto aceito do briefing até a aprovação da entrega, para
-            que as etapas repetitivas rodem sozinhas.
-          </p>
-          <p class="stack-line">React · Cloudflare Workers · Postgres</p>
-        </div>
-      </article>
+      </div>
     </section>
 
-    <!-- SERVIÇOS (bento) -->
-    <section id="servicos" class="section wrap" aria-labelledby="t-servicos">
-      <h2 id="t-servicos" class="display reveal">
-        <span>O que eu faço.</span>
-        <span class="tone-muted">E como fica no seu negócio.</span>
+    <!-- DETALHES -->
+    <section id="detalhes" class="section wrap" aria-labelledby="t-detalhes">
+      <h2 id="t-detalhes" class="display reveal">
+        <span>Os detalhes.</span>
+        <span class="tone-muted">Que fazem diferença.</span>
       </h2>
 
       <div class="bento">
         <article class="tile tile-wide reveal">
-          <h3>Landing pages e sites. <span class="tone-muted">Página de vendas ou institucional, com o botão do WhatsApp onde o cliente procura.</span></h3>
-          <div class="art art-landing" aria-hidden="true">
-            <div class="mini-page">
-              <span class="bar w70"></span><span class="bar w50"></span>
-              <span class="mini-btn">Agendar agora</span>
+          <h3>Feito para o celular primeiro. <span class="tone-muted">É onde a maioria dos seus clientes vai abrir o site.</span></h3>
+          <div class="art art-devices" aria-hidden="true">
+            <div class="frame frame-desk">
+              <span class="f-bar w60"></span><span class="f-bar w40 thin"></span>
+              <div class="f-grid"><i></i><i></i><i></i></div>
+              <span class="f-btn">Agendar</span>
             </div>
-            <div class="bubble">
-              <span class="bubble-name">Cliente · agora</span>
-              Oi! Vi o site e queria um orçamento.
+            <div class="frame frame-phone">
+              <span class="f-bar w80"></span><span class="f-bar w60 thin"></span>
+              <div class="f-grid one"><i></i></div>
+              <span class="f-btn">Agendar</span>
             </div>
+          </div>
+        </article>
+
+        <article class="tile reveal" data-delay="80">
+          <h3>Domínio e hospedagem no seu nome. <span class="tone-muted">O site é seu de verdade, não fica preso a mim.</span></h3>
+          <div class="art art-domain" aria-hidden="true">
+            <div class="d-row"><span class="d-lock"></span><div><b>alameda.com.br</b><span>registrado para Alameda</span></div><em class="pill pill-ok">ativo</em></div>
+            <div class="d-row"><span class="d-lock d-host"></span><div><b>Hospedagem</b><span>na conta da Alameda</span></div><em class="pill pill-ok">ativo</em></div>
           </div>
         </article>
 
         <article class="tile reveal">
-          <h3>Sistemas e painéis. <span class="tone-muted">Agenda, clientes, financeiro e relatórios, no jeito que sua empresa já trabalha.</span></h3>
-          <div class="art art-dash" aria-hidden="true">
-            <div class="kpis"><div><b>38</b><span>agendamentos</span></div><div><b>R$ 4,2 mil</b><span>no mês</span></div></div>
-            <div class="bars"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:52%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:95%"></i></div>
+          <h3>Prévia antes de publicar. <span class="tone-muted">Você acompanha por um link e pede ajustes no caminho.</span></h3>
+          <div class="art art-preview" aria-hidden="true">
+            <div class="pv-link"><span class="live-dot"></span> previa-alameda.netlify.app</div>
+            <div class="pv-chat">
+              <p class="pv-you">Dá para trocar a foto do topo?</p>
+              <p class="pv-me">Trocada. Dá uma olhada ✓</p>
+            </div>
           </div>
         </article>
 
-        <article class="tile reveal">
-          <h3>Pagamentos. <span class="tone-muted">Pix e cartão pelo Mercado Pago, avulso ou assinatura, com acesso liberado sozinho.</span></h3>
-          <div class="art art-pay" aria-hidden="true">
-            <div class="pay-row"><span class="pay-icon">✓</span><div><b>Pagamento aprovado</b><span>Plano Profissional · R$ 49,99/mês</span></div></div>
-            <div class="pay-row muted"><span class="pay-icon pay-pix">Pix</span><div><b>Acesso liberado</b><span>e-mail enviado ao cliente</span></div></div>
+        <article class="tile tile-wide reveal" data-delay="80">
+          <h3>Suporte depois do ar. <span class="tone-muted">Mudou um horário, um preço, uma foto? Me chama no WhatsApp.</span></h3>
+          <div class="art art-support" aria-hidden="true">
+            <div class="sp-msg sp-you"><b>Alameda</b>Guilherme, sábado agora fecha às 14h. Dá pra ajustar no site?</div>
+            <div class="sp-msg sp-me"><b>Guilherme</b>Ajustado, já está no ar ✓</div>
           </div>
         </article>
 
-        <article class="tile tile-wide reveal">
-          <h3>Bots e automações. <span class="tone-muted">Bots de Discord, lembretes e mensagens automáticas no WhatsApp.</span></h3>
-          <div class="art art-bot" aria-hidden="true">
-            <div class="msg"><span class="ava ava-u">R</span><div><b>ryo</b><p><code>!task</code> Ajustar checkout amanhã 15h</p></div></div>
-            <div class="msg"><span class="ava ava-b">M</span><div><b>Margot <em>BOT</em></b><p>Anotado. Prazo: amanhã às 15:00. Te lembro uma hora antes.</p></div></div>
+        <article class="tile tile-full reveal">
+          <div class="tile-split">
+            <h3>Também faço bots de Discord. <span class="tone-muted">Para comunidades e equipes: comandos, lembretes e tarefas direto no chat.</span></h3>
+            <div class="art art-bot" aria-hidden="true">
+              <div class="msg"><span class="ava ava-u">R</span><div><b>rafa</b><p><code>!task</code> Ajustar checkout amanhã 15h</p></div></div>
+              <div class="msg"><span class="ava ava-b">B</span><div><b>Bot <em>BOT</em></b><p>Anotado. Prazo: amanhã às 15:00. Te lembro uma hora antes.</p></div></div>
+            </div>
           </div>
         </article>
       </div>
@@ -285,36 +260,36 @@
       </h2>
       <ol class="steps">
         <li class="reveal"><kbd>1</kbd><h3>Conversa</h3><p>Você me conta o que precisa pelo WhatsApp ou numa chamada. Pergunto sobre seus clientes e o que precisa estar pronto primeiro.</p></li>
-        <li class="reveal"><kbd>2</kbd><h3>Proposta</h3><p>Escopo, prazo e valor por escrito. Nada começa sem você aprovar.</p></li>
-        <li class="reveal"><kbd>3</kbd><h3>Desenvolvimento</h3><p>Você acompanha por um link de prévia e pede ajustes antes da entrega final.</p></li>
-        <li class="reveal"><kbd>4</kbd><h3>No ar</h3><p>Configuro a hospedagem e o domínio, que ficam no seu nome, publico e explico como usar.</p></li>
+        <li class="reveal" data-delay="80"><kbd>2</kbd><h3>Proposta</h3><p>Escopo, prazo e valor por escrito. Nada começa sem você aprovar.</p></li>
+        <li class="reveal" data-delay="160"><kbd>3</kbd><h3>Desenvolvimento</h3><p>Você acompanha por um link de prévia e pede ajustes antes da entrega final.</p></li>
+        <li class="reveal" data-delay="240"><kbd>4</kbd><h3>No ar</h3><p>Configuro a hospedagem e o domínio, que ficam no seu nome, publico e explico como usar.</p></li>
       </ol>
     </section>
 
-    <!-- FAQ -->
+    <!-- PERGUNTAS -->
     <section id="perguntas" class="section wrap faq-wrap" aria-labelledby="t-faq">
       <h2 id="t-faq" class="display reveal">
         <span>Perguntas</span>
         <span class="tone-muted">frequentes.</span>
       </h2>
-      <div class="faq reveal">
-        <details>
+      <div class="faq">
+        <details class="reveal">
           <summary>Quanto custa um site?</summary>
-          <p>Depende do que ele precisa fazer. Uma landing page custa bem menos que um sistema com login e pagamentos. Depois da primeira conversa você recebe um valor fechado, por escrito.</p>
+          <p>Depende do que ele precisa fazer. Uma página de vendas custa bem menos que um sistema com login e pagamentos. Depois da primeira conversa você recebe um valor fechado, por escrito.</p>
         </details>
-        <details>
+        <details class="reveal" data-delay="60">
           <summary>Quanto tempo leva?</summary>
           <p>O prazo vem na proposta, junto com o valor, e depende do escopo. Durante o desenvolvimento você acompanha tudo por um link de prévia.</p>
         </details>
-        <details>
+        <details class="reveal" data-delay="120">
           <summary>Preciso já ter domínio e hospedagem?</summary>
           <p>Não. Domínio e hospedagem ficam no seu nome e são pagos direto por você, então o site é seu de verdade. Eu indico as opções e configuro tudo. Se você já tiver, uso o que existe.</p>
         </details>
-        <details>
+        <details class="reveal" data-delay="180">
           <summary>Consigo mudar o conteúdo sozinho depois?</summary>
-          <p>Quando faz sentido para o projeto, sim. O site da Floruit, por exemplo, tem um painel onde a equipe publica posts sem mexer em código.</p>
+          <p>Quando faz sentido para o projeto, sim: entrego um painel onde você troca textos, fotos, preços e horários sem mexer em código.</p>
         </details>
-        <details>
+        <details class="reveal" data-delay="240">
           <summary>E depois que o site estiver no ar?</summary>
           <p>Você continua falando comigo pelo WhatsApp para correções, ajustes e funções novas.</p>
         </details>
@@ -327,17 +302,17 @@
         <span>Tem um projeto?</span>
         <span class="tone-accent">Vamos conversar.</span>
       </h2>
-      <p class="lead center reveal">Conte em poucas linhas o que você precisa. Se tiver sites de referência, mande junto: ajuda a acertar o orçamento.</p>
-      <div class="contact-links reveal">
-        <a class="contact-item" data-link="whatsapp" href="#" target="_blank" rel="noopener">
+      <p class="lead center reveal" data-delay="80">Conte em poucas linhas o que você precisa. Se tiver sites de referência, mande junto: ajuda a acertar o orçamento.</p>
+      <div class="contact-links">
+        <a class="contact-item reveal" data-link="whatsapp" href="#" target="_blank" rel="noopener">
           <span class="ci-label">WhatsApp</span>
           <span class="ci-value" data-text="whatsappLabel">(89) 98109-3145</span>
         </a>
-        <a class="contact-item" data-link="email" href="#">
+        <a class="contact-item reveal" data-delay="80" data-link="email" href="#">
           <span class="ci-label">E-mail</span>
           <span class="ci-value" data-text="email">guifreitas343@gmail.com</span>
         </a>
-        <a class="contact-item" data-link="instagram" href="#" target="_blank" rel="noopener">
+        <a class="contact-item reveal" data-delay="160" data-link="instagram" href="#" target="_blank" rel="noopener">
           <span class="ci-label">Instagram</span>
           <span class="ci-value" data-text="instagramLabel">@zguifreitas</span>
         </a>
