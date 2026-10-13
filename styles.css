@@ -133,6 +133,9 @@ kbd {
 }
 .live-dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); flex: none; }
 .live-dot::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 2px solid var(--ok); opacity: .5; animation: live-ring 2s ease-out infinite; }
+/* "Online": verde de propósito, como o status de online do WhatsApp */
+.live-dot.online, .live-dot.online::after { --ok: #3ddc84; }
+:root[data-theme="light"] .live-dot.online, :root[data-theme="light"] .live-dot.online::after { --ok: #16a34a; }
 @keyframes live-ring { 0% { transform: scale(.6); opacity: .6; } 100% { transform: scale(1.6); opacity: 0; } }
 .hero h1 { display: grid; font-size: clamp(42px, 8.4vw, 100px); font-weight: 700; letter-spacing: -0.055em; line-height: .98; }
 .lead { color: var(--ink-muted); font-size: clamp(16px, 1.7vw, 19px); line-height: 1.6; max-width: 56ch; margin: 28px auto 0; }
